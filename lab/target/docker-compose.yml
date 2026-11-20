@@ -1,0 +1,10 @@
+# Intentionally vulnerable web app (DVWA). Bound ONLY to the lab interface.
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    container_name: dvwa
+    ports:
+      - "${LAB_IP:-127.0.0.1}:8080:80"
+    volumes:
+      - ./logs:/var/log/apache2
+    restart: unless-stopped

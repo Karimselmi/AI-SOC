@@ -1,0 +1,10 @@
+<ossec_config>
+  <localfile>
+    <log_format>json</log_format>
+    <location>/var/log/suricata/eve.json</location>
+  </localfile>
+  <localfile>
+    <log_format>apache</log_format>
+    <location>/opt/soc-lab/target/logs/access.log</location>
+  </localfile>
+</ossec_config>
